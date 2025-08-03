@@ -56,21 +56,18 @@ export default function Home() {
       icon: Target,
       title: 'Semester-wise Organization',
       description: 'Content organized by semesters to match your academic progression',
-      gradient: 'from-blue-500 to-cyan-500',
       delay: '0ms'
     },
     {
       icon: Lightbulb,
       title: 'Senior Insights',
-      description: 'Get tips and tricks from seniors who has been there',
-      gradient: 'from-purple-500 to-pink-500',
+      description: 'Get tips and tricks from seniors who have been there',
       delay: '100ms'
     },
     {
       icon: Clock,
       title: 'Time Efficient',
       description: 'Save time with curated resources and prioritized content',
-      gradient: 'from-green-500 to-teal-500',
       delay: '200ms'
     }
   ];
@@ -78,32 +75,36 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center space-y-8 py-20 relative">
+      <section className="text-center space-y-8 py-20">
         <div className="space-y-6 animate-fade-in">
-
-          <h1 className="text-5xl md:text-7xl font-bold font-poppins bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent leading-tight">
+          <div className="inline-flex items-center space-x-2 bg-secondary border border-border rounded-full px-4 py-2 text-sm font-medium text-muted-foreground">
+            <Sparkles className="h-4 w-4" />
+            <span>Your Academic Journey Made Simple</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
             YOUR ACADEMIC JOURNEY
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-foreground">
+          <h2 className="text-4xl md:text-6xl font-bold text-primary">
             MADE SIMPLE
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Curated resources, study tips, and guidance from successful seniors.
             <br />
             <span className="text-lg opacity-80">Learn smarter, not harder with our comprehensive study materials.</span>
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in" style={{ animationDelay: '200ms' }}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '200ms' }}>
           <Link href="/semesters">
-            <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-10 py-4 rounded-2xl text-lg shadow-professional hover:shadow-professional-hover transition-all duration-300 hover:scale-105 group">
+            <Button size="lg" className="btn-primary px-10 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition-all duration-300 group">
               Explore Resources
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
           <Link href="/cgpa-calculator">
-            <Button size="lg" variant="outline" className="glass dark:glass-dark border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 font-semibold px-10 py-4 rounded-2xl text-lg hover:scale-105 transition-all duration-300 group shadow-professional hover:shadow-professional-hover">
-              <Calculator className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+            <Button size="lg" variant="outline" className="btn-secondary px-10 py-4 rounded-xl text-lg font-semibold hover:scale-105 transition-all duration-300 group">
+              <Calculator className="mr-2 h-4 w-4" />
               CGPA Calculator
             </Button>
           </Link>
@@ -113,10 +114,10 @@ export default function Home() {
       {/* Features Section */}
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Why Choose Us? 🤔
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We understand the struggles of being a fresher. Here's how we make your journey easier.
           </p>
         </div>
@@ -125,15 +126,15 @@ export default function Home() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="group hover:shadow-professional-hover transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+              className="card-professional hover:scale-105 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: feature.delay }}
             >
               <CardContent className="p-6">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-professional`}>
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -144,15 +145,15 @@ export default function Home() {
       <section className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Browse by Semester 📅
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mt-2">
+            <p className="text-lg text-muted-foreground mt-2">
               Choose your current semester and start learning
             </p>
           </div>
           <Link href="/semesters">
-            <Button variant="outline" className="rounded-2xl glass dark:glass-dark border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 hover:scale-105 transition-all duration-300 shadow-professional">
+            <Button variant="outline" className="btn-secondary rounded-xl hover:scale-105 transition-all duration-300">
               View All
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -163,13 +164,13 @@ export default function Home() {
           {semesterData.map((semester, index) => (
             <Card
               key={semester.id}
-              className="group hover:shadow-professional-hover hover:-translate-y-2 transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+              className="card-professional hover:scale-105 transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="pb-3">
                 <div className="text-center">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{semester.emoji}</div>
-                  <CardTitle className="text-lg font-semibold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <div className="text-5xl mb-4">{semester.emoji}</div>
+                  <CardTitle className="text-lg font-semibold text-foreground">
                     {semester.name}
                   </CardTitle>
                   <CardDescription className="text-sm leading-relaxed mt-3">
@@ -179,23 +180,23 @@ export default function Home() {
               </CardHeader>
               <CardContent className="pt-0">
                 <div className="flex justify-center space-x-2 mb-4">
-                  <Badge variant="secondary" className="text-xs bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800">
+                  <Badge variant="secondary" className="text-xs bg-primary/10 text-primary border-primary/20">
                     {semester.subjects.length} Subjects
                   </Badge>
                   <div className="flex space-x-1">
-                    <div className="w-6 h-6 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform" title="Resources">
+                    <div className="w-6 h-6 rounded-lg bg-blue-500/20 flex items-center justify-center" title="Resources">
                       <BookMarked className="h-3 w-3 text-blue-600" />
                     </div>
-                    <div className="w-6 h-6 rounded-lg bg-green-500/20 flex items-center justify-center group-hover:scale-110 transition-transform" title="Playlists">
+                    <div className="w-6 h-6 rounded-lg bg-green-500/20 flex items-center justify-center" title="Playlists">
                       <Play className="h-3 w-3 text-green-600" />
                     </div>
-                    <div className="w-6 h-6 rounded-lg bg-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform" title="PYQs">
+                    <div className="w-6 h-6 rounded-lg bg-orange-500/20 flex items-center justify-center" title="PYQs">
                       <Download className="h-3 w-3 text-orange-600" />
                     </div>
                   </div>
                 </div>
                 <Link href={`/semester/${semester.id}`}>
-                  <Button className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-professional hover:shadow-professional-hover group-hover:scale-105 transition-all duration-300">
+                  <Button className="w-full rounded-xl btn-primary font-semibold hover:scale-105 transition-all duration-300">
                     Explore Semester
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -205,12 +206,14 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Popular Subjects */}
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Popular Subjects 🔥
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Quick access to the most important subjects with comprehensive resources
           </p>
         </div>
@@ -222,14 +225,14 @@ export default function Home() {
               return (
                 <Card
                   key={subject.id}
-                  className="group hover:shadow-professional-hover hover:-translate-y-2 transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+                  className="card-professional hover:scale-105 transition-all duration-300 animate-slide-up"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <div className={`h-2 bg-gradient-to-r ${subject.gradient}`} />
+                  <div className="h-2 bg-primary" />
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-3">
-                      <div className={`p-3 rounded-2xl bg-gradient-to-r ${subject.gradient} shadow-professional group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                        <IconComponent className="h-6 w-6 text-white" />
+                      <div className="p-3 rounded-xl bg-primary/10">
+                        <IconComponent className="h-6 w-6 text-primary" />
                       </div>
                       <div className="flex space-x-1">
                         <div className="w-6 h-6 rounded-lg bg-blue-500/20 flex items-center justify-center" title="Resources">
@@ -243,7 +246,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
+                    <CardTitle className="text-xl font-bold text-foreground leading-tight">
                       {subject.name}
                     </CardTitle>
                     <CardDescription className="text-sm leading-relaxed">
@@ -252,7 +255,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex items-center justify-between mb-4">
-                      <Badge className="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800">
+                      <Badge className="bg-primary/10 text-primary border-primary/20">
                         {subject.difficulty}
                       </Badge>
                       {subject.trending && (
@@ -263,7 +266,7 @@ export default function Home() {
                       )}
                     </div>
                     <Link href={`/subject/${subject.id}`}>
-                      <Button className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-professional hover:shadow-professional-hover group-hover:scale-105 transition-all duration-300">
+                      <Button className="w-full rounded-xl btn-primary font-semibold hover:scale-105 transition-all duration-300">
                         Start Learning
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -276,6 +279,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-
   );
 }

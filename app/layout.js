@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-sans">
+      <body className="font-sans antialiased">
         <Analytics />
         <ThemeProvider
           attribute="class"
@@ -28,14 +28,9 @@ export default function RootLayout({ children }) {
         >
           <LenisProvider>
             <ScrollProgressBar />
-            <div className="min-h-screen bg-background relative overflow-hidden gradient-bg-light dark:gradient-bg-dark">
-              {/* Floating gradient blobs */}
-              <div className="floating-blob top-20 left-20 w-96 h-96 bg-gradient-to-r from-indigo-200 to-purple-200 dark:from-indigo-500 dark:to-purple-500" />
-              <div className="floating-blob top-40 right-20 w-80 h-80 bg-gradient-to-r from-purple-200 to-pink-200 dark:from-purple-500 dark:to-pink-500" />
-              <div className="floating-blob bottom-20 left-1/3 w-72 h-72 bg-gradient-to-r from-blue-200 to-indigo-200 dark:from-blue-500 dark:to-indigo-500" />
-              
+            <div className="min-h-screen bg-background">
               <Header />
-              <main className="container mx-auto px-4 py-8 relative z-10">
+              <main className="container mx-auto px-4 py-8">
                 {children}
               </main>
             </div>
