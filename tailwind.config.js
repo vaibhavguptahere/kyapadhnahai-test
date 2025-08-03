@@ -28,11 +28,13 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        glow: '0 0 20px rgba(99, 102, 241, 0.3)',
-        'glow-lg': '0 0 30px rgba(99, 102, 241, 0.4)',
-        card: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        neon: '0 0 10px #6366f1',
+        glow: '0 0 20px rgba(79, 70, 229, 0.15)',
+        'glow-lg': '0 0 30px rgba(79, 70, 229, 0.2)',
+        card: '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        neon: '0 0 15px rgba(79, 70, 229, 0.3)',
+        'professional': '0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06)',
+        'professional-hover': '0 8px 16px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06)',
       },
       colors: {
         background: 'hsl(var(--background))',

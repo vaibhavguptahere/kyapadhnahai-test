@@ -46,10 +46,10 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="p-2 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300 shadow-glow group-hover:shadow-glow-lg">
+            <div className="p-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 group-hover:from-indigo-700 group-hover:to-purple-700 transition-all duration-300 shadow-professional group-hover:shadow-professional-hover">
               <FileQuestionIcon className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold font-poppins bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               KyaPadhnahai?
             </span>
           </Link>
@@ -62,7 +62,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-200 group"
+                  className="flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-200 group"
                 >
                   <IconComponent className="h-4 w-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
@@ -77,7 +77,7 @@ export function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="h-9 w-9 p-0 rounded-xl hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-200"
+              className="h-9 w-9 p-0 rounded-xl hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-200"
             >
               <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -88,7 +88,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden h-9 w-9 p-0 rounded-xl hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-200"
+              className="md:hidden h-9 w-9 p-0 rounded-xl hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-200"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -110,7 +110,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="flex items-center space-x-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-lg hover:bg-white/10 dark:hover:bg-white/5"
+                    className="flex items-center space-x-3 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors py-2 px-2 rounded-lg hover:bg-white/20 dark:hover:bg-white/10"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <item.icon className="h-4 w-4" />
