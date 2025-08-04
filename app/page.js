@@ -78,31 +78,31 @@ export default function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center space-y-8 py-20 relative">
-        <div className="space-y-6 animate-fade-in">
+      <section className="text-center space-y-8 py-20 relative overflow-hidden">
+        <div className="space-y-6 animate-fade-in-up">
 
-          <h1 className="text-5xl md:text-7xl font-bold font-poppins bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold font-poppins bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent leading-tight tracking-tight">
             YOUR ACADEMIC JOURNEY
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-foreground">
+          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-gray-800 dark:text-gray-100">
             MADE SIMPLE
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium font-inter">
             Curated resources, study tips, and guidance from successful seniors.
             <br />
-            <span className="text-lg opacity-80">Learn smarter, not harder with our comprehensive study materials.</span>
+            <span className="text-lg opacity-75">Learn smarter, not harder with our comprehensive study materials.</span>
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in" style={{ animationDelay: '200ms' }}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '300ms' }}>
           <Link href="/semesters">
-            <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-10 py-4 rounded-2xl text-lg shadow-professional hover:shadow-professional-hover transition-all duration-300 hover:scale-105 group">
+            <Button size="lg" className="btn-modern bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-10 py-4 text-lg group">
               Explore Resources
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
           <Link href="/cgpa-calculator">
-            <Button size="lg" variant="outline" className="glass dark:glass-dark border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 font-semibold px-10 py-4 rounded-2xl text-lg hover:scale-105 transition-all duration-300 group shadow-professional hover:shadow-professional-hover">
+            <Button size="lg" variant="outline" className="btn-modern btn-modern-light dark:btn-modern-dark font-semibold px-10 py-4 text-lg group">
               <Calculator className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
               CGPA Calculator
             </Button>
@@ -113,10 +113,10 @@ export default function Home() {
       {/* Features Section */}
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
             Why Choose Us? 🤔
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-inter">
             We understand the struggles of being a fresher. Here's how we make your journey easier.
           </p>
         </div>
@@ -125,15 +125,15 @@ export default function Home() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="group hover:shadow-professional-hover transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+              className="group card-hover border border-gray-200 dark:border-gray-700 glass dark:glass-dark overflow-hidden animate-fade-in-up"
               style={{ animationDelay: feature.delay }}
             >
               <CardContent className="p-6">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-professional`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md`}>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{feature.description}</p>
+                <h3 className="text-xl font-semibold font-poppins mb-3 text-gray-800 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm font-inter">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -144,15 +144,15 @@ export default function Home() {
       <section className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+            <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
               Browse by Semester 📅
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mt-2">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mt-2 font-inter">
               Choose your current semester and start learning
             </p>
           </div>
           <Link href="/semesters">
-            <Button variant="outline" className="rounded-2xl glass dark:glass-dark border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 hover:scale-105 transition-all duration-300 shadow-professional">
+            <Button variant="outline" className="btn-modern btn-modern-light dark:btn-modern-dark">
               View All
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -163,23 +163,23 @@ export default function Home() {
           {semesterData.map((semester, index) => (
             <Card
               key={semester.id}
-              className="group hover:shadow-professional-hover hover:-translate-y-2 transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+              className="group card-hover border border-gray-200 dark:border-gray-700 glass dark:glass-dark overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="pb-3">
                 <div className="text-center">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{semester.emoji}</div>
-                  <CardTitle className="text-lg font-semibold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <CardTitle className="text-lg font-semibold font-poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     {semester.name}
                   </CardTitle>
-                  <CardDescription className="text-sm leading-relaxed mt-3">
+                  <CardDescription className="text-sm leading-relaxed mt-3 font-inter">
                     {semester.description}
                   </CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
                 <div className="flex justify-center space-x-2 mb-4">
-                  <Badge variant="secondary" className="text-xs bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800">
+                  <Badge variant="secondary" className="text-xs bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800 font-medium">
                     {semester.subjects.length} Subjects
                   </Badge>
                   <div className="flex space-x-1">
@@ -195,7 +195,7 @@ export default function Home() {
                   </div>
                 </div>
                 <Link href={`/semester/${semester.id}`}>
-                  <Button className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-professional hover:shadow-professional-hover group-hover:scale-105 transition-all duration-300">
+                  <Button className="w-full btn-modern bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold">
                     Explore Semester
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -207,10 +207,10 @@ export default function Home() {
       </section>
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-100">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
             Popular Subjects 🔥
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-inter">
             Quick access to the most important subjects with comprehensive resources
           </p>
         </div>
@@ -222,13 +222,13 @@ export default function Home() {
               return (
                 <Card
                   key={subject.id}
-                  className="group hover:shadow-professional-hover hover:-translate-y-2 transition-all duration-500 border border-slate-200 dark:border-slate-700 glass dark:glass-dark overflow-hidden hover:scale-105 animate-slide-up"
+                  className="group card-hover border border-gray-200 dark:border-gray-700 glass dark:glass-dark overflow-hidden animate-fade-in-up"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className={`h-2 bg-gradient-to-r ${subject.gradient}`} />
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-3">
-                      <div className={`p-3 rounded-2xl bg-gradient-to-r ${subject.gradient} shadow-professional group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                      <div className={`p-3 rounded-2xl bg-gradient-to-r ${subject.gradient} shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                         <IconComponent className="h-6 w-6 text-white" />
                       </div>
                       <div className="flex space-x-1">
@@ -243,16 +243,16 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
+                    <CardTitle className="text-xl font-bold font-poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
                       {subject.name}
                     </CardTitle>
-                    <CardDescription className="text-sm leading-relaxed">
+                    <CardDescription className="text-sm leading-relaxed font-inter">
                       {subject.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex items-center justify-between mb-4">
-                      <Badge className="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800">
+                      <Badge className="bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800 font-medium">
                         {subject.difficulty}
                       </Badge>
                       {subject.trending && (
@@ -263,7 +263,7 @@ export default function Home() {
                       )}
                     </div>
                     <Link href={`/subject/${subject.id}`}>
-                      <Button className="w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-professional hover:shadow-professional-hover group-hover:scale-105 transition-all duration-300">
+                      <Button className="w-full btn-modern bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold">
                         Start Learning
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
