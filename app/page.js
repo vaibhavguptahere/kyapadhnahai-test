@@ -116,7 +116,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
             Why Choose Us? 🤔
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-inter">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
             We understand the struggles of being a fresher. Here's how we make your journey easier.
           </p>
         </div>
@@ -133,7 +133,7 @@ export default function Home() {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold font-poppins mb-3 text-gray-800 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm font-inter">{feature.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm font-inter">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -147,7 +147,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
               Browse by Semester 📅
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mt-2 font-inter">
+            <p className="text-lg text-muted-foreground mt-2 font-inter">
               Choose your current semester and start learning
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
             Popular Subjects 🔥
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-inter">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
             Quick access to the most important subjects with comprehensive resources
           </p>
         </div>

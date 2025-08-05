@@ -49,7 +49,7 @@ export default function TipsPage() {
                 <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                     Extra Tips 💡
                 </h1>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
                     Learn from the experiences of successful seniors who have walked the path before you.
                     Real tips, real results, real success stories.
                 </p>
@@ -88,7 +88,7 @@ export default function TipsPage() {
 
             {/* Results Count */}
             <div className="flex items-center justify-between">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-inter">
                     Showing {filteredTips.length} of {tipsData.length} tips
                 </p>
                 {selectedCategory !== 'All Tips' && (
@@ -124,7 +124,7 @@ export default function TipsPage() {
 
                             <CardContent className="space-y-4">
                                 {/* Tip Content */}
-                                <p className="text-muted-foreground leading-relaxed text-sm">
+                                <p className="text-muted-foreground leading-relaxed text-sm font-inter">
                                     {tip.content}
                                 </p>
 
@@ -146,8 +146,8 @@ export default function TipsPage() {
             {filteredTips.length === 0 && (
                 <div className="text-center py-12 space-y-4">
                     <div className="text-6xl">🔍</div>
-                    <h3 className="text-2xl font-semibold text-foreground">No tips found</h3>
-                    <p className="text-muted-foreground">Try adjusting your search or filters</p>
+                    <h3 className="text-2xl font-semibold text-foreground font-poppins">No tips found</h3>
+                    <p className="text-muted-foreground font-inter">Try adjusting your search or filters</p>
                     <Button
                         onClick={() => {
                             setSearchQuery('');
@@ -162,8 +162,8 @@ export default function TipsPage() {
                 </div>
             )}
             {/* Disclaimer */}
-            <div className="text-center text-sm text-muted-foreground italic px-4 py-2 border rounded-xl bg-background/50">
-                ⚠️ Disclaimer: All the above tips are shared by seniors based on their unique scenarios and experiences. Take what helps you, leave what doesn’t — and remember, use them wisely and carefully! 😄
+            <div className="text-center text-sm text-muted-foreground italic px-4 py-2 border rounded-xl bg-background/50 font-inter">
+                ⚠️ Disclaimer: All the above tips are shared by seniors based on their unique scenarios and experiences. Take what helps you, leave what doesn't — and remember, use them wisely and carefully! 😄
             </div>
         </div>
     );

@@ -41,12 +41,11 @@ export function Header() {
   }
 
   const isDark = resolvedTheme === 'dark';
-  const headerClass = isDark ? 'header-dark' : 'header-light';
-  const navLinkClass = isDark ? 'nav-link-dark' : 'nav-link-light';
+  const headerClass = 'sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border';
 
 
   return (
-    <header className={`sticky top-0 z-50 w-full ${headerClass}`}>
+    <header className={headerClass}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -67,7 +66,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium ${navLinkClass} group`}
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary transition-colors group"
                 >
                   <IconComponent className="h-4 w-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
@@ -115,7 +114,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200 py-3 px-4 rounded-lg hover:bg-black/5 dark:hover:bg-white/10"
+                    className="flex items-center space-x-3 text-sm font-medium text-foreground hover:text-primary transition-all duration-200 py-3 px-4 rounded-lg hover:bg-accent"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <item.icon className="h-4 w-4" />

@@ -127,7 +127,7 @@ export default function SubjectPage() {
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-orange-500" />
-                  Pro Tips from a Senior
+                  <span className="font-poppins">Pro Tips from a Senior</span>
                 </h3>
                 <div className="grid gap-3">
                   {subject.kitnaParhaHai.tips.map((tip, index) => (
@@ -135,7 +135,7 @@ export default function SubjectPage() {
                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">
                         {index + 1}
                       </div>
-                      <p className="text-foreground leading-relaxed">{tip}</p>
+                      <p className="text-foreground leading-relaxed font-inter">{tip}</p>
                     </div>
                   ))}
                 </div>
@@ -173,7 +173,7 @@ export default function SubjectPage() {
                             <div className={`font-medium ${checkedNotes.has(note.title) ? 'line-through text-muted-foreground' : ''}`}>
                               {note.title}
                             </div>
-                            <div className="text-xs text-muted-foreground uppercase">
+                            <div className="text-xs text-muted-foreground uppercase font-inter">
                               {note.type}
                             </div>
                           </div>
@@ -219,7 +219,7 @@ export default function SubjectPage() {
                             <div className={`font-medium ${checkedVideos.has(video.title) ? 'line-through text-muted-foreground' : ''}`}>
                               {video.title}
                             </div>
-                            <div className="text-xs text-muted-foreground">
+                            <div className="text-xs text-muted-foreground font-inter">
                               {video.platform}
                             </div>
                           </div>
@@ -258,8 +258,8 @@ export default function SubjectPage() {
                     <div className="flex items-center gap-3">
                       <ExternalLink className="h-4 w-4 text-muted-foreground" />
                       <div>
-                        <div className="font-medium">{resource.title}</div>
-                        <div className="text-xs text-muted-foreground uppercase">
+                        <div className="font-medium font-inter">{resource.title}</div>
+                        <div className="text-xs text-muted-foreground uppercase font-inter">
                           {resource.type}
                         </div>
                       </div>
@@ -277,7 +277,7 @@ export default function SubjectPage() {
           </Card>
         </TabsContent>
       </Tabs>
-      <div className="text-center text-sm text-muted-foreground italic px-4 py-2 border rounded-xl bg-background/50">
+      <div className="text-center text-sm text-muted-foreground italic px-4 py-2 border rounded-xl bg-background/50 font-inter">
         ⚠️ Disclaimer: All the notes and resources shared here are provided by me to the best of my knowledge, with the aim of helping you score well. Use them wisely, adapt them to your needs, and study smart! 📚✨
       </div>
     </div>

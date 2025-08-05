@@ -14,20 +14,20 @@
 
 /* Root variables for light mode */
 :root {
-  --background: 250 251 252; /* #fafbfc - Very light gray */
-  --foreground: 30 41 59; /* #1e293b - Dark slate */
+  --background: 255 255 255; /* white */
+  --foreground: 15 23 42; /* #0f172a - Very dark slate */
   --card: 255 255 255; /* white */
   --card-foreground: 15 23 42; /* #0f172a - Very dark slate */
   --popover: 255 255 255;
-  --popover-foreground: 30 41 59;
+  --popover-foreground: 15 23 42;
   --primary: 79 70 229; /* #4f46e5 indigo-600 */
   --primary-foreground: 255 255 255;
   --secondary: 241 245 249; /* #f1f5f9 - Light slate */
-  --secondary-foreground: 30 41 59;
+  --secondary-foreground: 15 23 42;
   --muted: 248 250 252; /* #f8fafc - Very light slate */
   --muted-foreground: 100 116 139; /* #64748b - Slate */
   --accent: 241 245 249;
-  --accent-foreground: 30 41 59;
+  --accent-foreground: 15 23 42;
   --destructive: 239 68 68;
   --destructive-foreground: 255 255 255;
   --border: 226 232 240; /* #e2e8f0 - Light slate border */

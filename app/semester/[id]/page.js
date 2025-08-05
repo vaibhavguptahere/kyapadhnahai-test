@@ -71,7 +71,7 @@ export default function SemesterPage() {
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             {semester.name}
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
             {semester.description}
           </p>
           <Badge variant="secondary" className="text-base px-4 py-2">
@@ -83,10 +83,10 @@ export default function SemesterPage() {
       {/* Subjects Grid */}
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-foreground">
+          <h2 className="text-2xl font-bold text-foreground font-poppins">
             Subjects in {semester.name}
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground font-inter">
             {filteredSubjects.length} of {semester.subjects.length} subjects
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function SemesterPage() {
                 <CardTitle className="text-xl font-bold group-hover:text-purple-600 transition-colors">
                   {subject.name}
                 </CardTitle>
-                <CardDescription className="text-sm leading-relaxed">
+                <CardDescription className="text-sm leading-relaxed font-inter">
                   {subject.description}
                 </CardDescription>
               </CardHeader>
@@ -133,8 +133,8 @@ export default function SemesterPage() {
       {filteredSubjects.length === 0 && (
         <div className="text-center py-12 space-y-4">
           <div className="text-6xl">🔍</div>
-          <h3 className="text-2xl font-semibold text-foreground">No subjects found</h3>
-          <p className="text-muted-foreground">Try adjusting your search query</p>
+          <h3 className="text-2xl font-semibold text-foreground font-poppins">No subjects found</h3>
+          <p className="text-muted-foreground font-inter">Try adjusting your search query</p>
           <Button
             onClick={() => setSearchQuery('')}
             variant="outline"

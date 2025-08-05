@@ -47,7 +47,7 @@ export default function SemestersPage() {
         <h1 className="text-4xl md:text-5xl font-bold font-poppins bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
           Browse by Semester 📅
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
           Choose your current semester and access all the subjects and resources you need
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function SemestersPage() {
                 <CardTitle className="text-2xl font-bold font-poppins group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                   {semester.name}
                 </CardTitle>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base font-inter">
                   {semester.description}
                 </CardDescription>
                 <Badge variant="secondary" className="mt-2 bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20">
@@ -104,7 +104,7 @@ export default function SemestersPage() {
                     <div key={subject.id} className="flex items-center justify-between p-3 glass dark:glass-dark rounded-xl hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-200 group/subject">
                       <div className="flex items-center gap-2">
                         <span className="text-lg group-hover/subject:scale-110 transition-transform">{subject.emoji}</span>
-                        <span className="text-sm font-medium group-hover/subject:text-purple-600 dark:group-hover/subject:text-purple-400 transition-colors">{subject.name}</span>
+                        <span className="text-sm font-medium text-foreground group-hover/subject:text-purple-600 dark:group-hover/subject:text-purple-400 transition-colors font-inter">{subject.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Badge variant="outline" className="text-xs bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20">
@@ -155,7 +155,7 @@ export default function SemestersPage() {
           <h2 className="text-xl font-bold font-poppins text-center mb-4 text-purple-800 dark:text-purple-200">
             📚 Other Resources
           </h2>
-          <p className="text-sm text-center text-purple-700 dark:text-purple-300 mb-6">
+          <p className="text-sm text-center text-purple-700 dark:text-purple-300 mb-6 font-inter">
             Quick access to syllabus, calendar, and key academic info.
           </p>
 
@@ -163,61 +163,61 @@ export default function SemestersPage() {
             <li>
               <Link
                 href="https://drive.google.com/file/d/1XikF2fuyvXvt627ardxAT9_IKETNtShA/view?usp=sharing" target='blank'
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <BookOpen className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">Syllabus</span>
+                <span className="font-medium font-inter">Syllabus</span>
               </Link>
             </li>
             <li>
               <Link
                 href="https://drive.google.com/file/d/1V0Ux4cNT2N0-NauSVtwvaXVqcq1Coj5L/view?usp=drive_link" target='blank'
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <Clock className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">Academic Calendar</span>
+                <span className="font-medium font-inter">Academic Calendar</span>
               </Link>
             </li>
             <li>
               <Link
                 href="https://fee-payments.bennett.edu.in/" target='blank'
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <ReceiptIndianRupee className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">Official Fee Website</span>
+                <span className="font-medium font-inter">Official Fee Website</span>
               </Link>
             </li>
             <li>
               <Link
                 href="https://www.bennett.edu.in/" target='blank'
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <GraduationCap className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">Bennett Official Website</span>
+                <span className="font-medium font-inter">Bennett Official Website</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/cgpa-calculator"
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <Calculator className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">CGPA Calculator</span>
+                <span className="font-medium font-inter">CGPA Calculator</span>
               </Link>
             </li>
             <li>
               <Link
                 href="https://onedrive.live.com/?authkey=%21AL7D4UGKHQa%2DUyg&id=16E1A3480CFEA7CF%21561&cid=16E1A3480CFEA7CF" target='blank'
-                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-purple-800 dark:text-white group hover:scale-105"
+                className="flex items-center gap-3 glass dark:glass-dark hover:bg-white/20 dark:hover:bg-white/10 transition-all px-4 py-3 rounded-xl text-foreground group hover:scale-105"
               >
                 <GraduationCap className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span className="font-medium">PYQ's by Full Stack Club</span>
+                <span className="font-medium font-inter">PYQ's by Full Stack Club</span>
               </Link>
             </li>
           </ul>
         </div>
 
-        <div className="text-sm text-muted-foreground text-center font-medium">
+        <div className="text-sm text-muted-foreground text-center font-medium font-inter">
           More resources will be added soon ✨
         </div>
       </div>
