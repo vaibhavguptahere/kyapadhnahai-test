@@ -108,7 +108,7 @@ export default function TipsPage() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-start justify-between mb-3">
                                     <div className="flex items-center gap-2">
-                                        <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500">
+                                        <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-secondary">
                                             <CategoryIcon className="h-4 w-4 text-white" />
                                         </div>
                                         <Badge variant="secondary" className="text-xs">
@@ -118,6 +118,7 @@ export default function TipsPage() {
                                 </div>
 
                                 <CardTitle className="text-xl font-bold group-hover:text-purple-600 transition-colors leading-tight">
+                                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors leading-tight">
                                     {tip.title}
                                 </CardTitle>
                             </CardHeader>

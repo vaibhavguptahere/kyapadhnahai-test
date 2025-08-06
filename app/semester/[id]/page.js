@@ -107,6 +107,7 @@ export default function SemesterPage() {
                 </div>
 
                 <CardTitle className="text-xl font-bold group-hover:text-purple-600 transition-colors">
+                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
                   {subject.name}
                 </CardTitle>
                 <CardDescription className="text-sm leading-relaxed font-inter">

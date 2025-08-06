@@ -135,7 +135,7 @@ export default function CGPACalculator() {
 
                     {cgpa !== null && (
                         <div className="text-center pt-6 space-y-4 animate-slide-up">
-                            <div className="text-lg font-medium text-muted-foreground">
+                            <div className="text-lg font-medium text-foreground">
                                 Your CGPA is:
                             </div>
                             <div className={`text-4xl font-bold font-poppins ${getCGPAColor(cgpa)}`}>

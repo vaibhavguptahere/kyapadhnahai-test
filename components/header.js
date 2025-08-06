@@ -66,7 +66,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary transition-colors group"
+                  className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:text-primary hover:bg-accent/50 transition-colors group"
                 >
                   <IconComponent className="h-4 w-4 group-hover:scale-110 transition-transform" />
                   <span>{item.name}</span>
@@ -114,7 +114,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="flex items-center space-x-3 text-sm font-medium text-foreground hover:text-primary transition-all duration-200 py-3 px-4 rounded-lg hover:bg-accent"
+                    className="flex items-center space-x-3 text-sm font-medium text-foreground hover:text-primary transition-all duration-200 py-3 px-4 rounded-lg hover:bg-accent/50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <item.icon className="h-4 w-4" />

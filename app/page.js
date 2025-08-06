@@ -84,10 +84,10 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold font-poppins bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent leading-tight tracking-tight">
             YOUR ACADEMIC JOURNEY
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-gray-800 dark:text-gray-100">
+          <h2 className="text-4xl md:text-6xl font-bold font-poppins text-foreground">
             MADE SIMPLE
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium font-inter">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-medium font-inter">
             Curated resources, study tips, and guidance from successful seniors.
             <br />
             <span className="text-lg opacity-75">Learn smarter, not harder with our comprehensive study materials.</span>
@@ -113,7 +113,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-foreground">
             Why Choose Us? 🤔
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
@@ -132,7 +132,7 @@ export default function Home() {
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md`}>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold font-poppins mb-3 text-gray-800 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{feature.title}</h3>
+                <h3 className="text-xl font-semibold font-poppins mb-3 text-foreground group-hover:text-primary transition-colors">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm font-inter">{feature.description}</p>
               </CardContent>
             </Card>
@@ -144,7 +144,7 @@ export default function Home() {
       <section className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
+            <h2 className="text-3xl md:text-4xl font-bold font-poppins text-foreground">
               Browse by Semester 📅
             </h2>
             <p className="text-lg text-muted-foreground mt-2 font-inter">
@@ -169,7 +169,7 @@ export default function Home() {
               <CardHeader className="pb-3">
                 <div className="text-center">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{semester.emoji}</div>
-                  <CardTitle className="text-lg font-semibold font-poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <CardTitle className="text-lg font-semibold font-poppins group-hover:text-primary transition-colors">
                     {semester.name}
                   </CardTitle>
                   <CardDescription className="text-sm leading-relaxed mt-3 font-inter">
@@ -207,7 +207,7 @@ export default function Home() {
       </section>
       <section className="space-y-8">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-gray-800 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins text-foreground">
             Popular Subjects 🔥
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-inter">
@@ -243,7 +243,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-bold font-poppins group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-tight">
+                    <CardTitle className="text-xl font-bold font-poppins group-hover:text-primary transition-colors leading-tight">
                       {subject.name}
                     </CardTitle>
                     <CardDescription className="text-sm leading-relaxed font-inter">

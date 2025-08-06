@@ -61,6 +61,7 @@ export default function SemestersPage() {
               <div className="text-center space-y-2">
                 <div className="text-6xl group-hover:scale-110 transition-transform duration-300">{semester.emoji}</div>
                 <CardTitle className="text-2xl font-bold font-poppins group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                <CardTitle className="text-2xl font-bold font-poppins group-hover:text-primary transition-colors">
                   {semester.name}
                 </CardTitle>
                 <CardDescription className="text-base font-inter">
@@ -104,7 +105,7 @@ export default function SemestersPage() {
                     <div key={subject.id} className="flex items-center justify-between p-3 glass dark:glass-dark rounded-xl hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-200 group/subject">
                       <div className="flex items-center gap-2">
                         <span className="text-lg group-hover/subject:scale-110 transition-transform">{subject.emoji}</span>
-                        <span className="text-sm font-medium text-foreground group-hover/subject:text-purple-600 dark:group-hover/subject:text-purple-400 transition-colors font-inter">{subject.name}</span>
+                        <span className="text-sm font-medium text-foreground group-hover/subject:text-primary transition-colors font-inter">{subject.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Badge variant="outline" className="text-xs bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20">
