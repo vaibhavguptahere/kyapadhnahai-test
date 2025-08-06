@@ -14,8 +14,8 @@
 
 /* Root variables for light mode */
 :root {
-  --background: 255 255 255; /* white */
-  --foreground: 15 23 42; /* #0f172a - Very dark slate */
+  --background: 255 255 255;
+  --foreground: 15 23 42;
   --card: 255 255 255; /* white */
   --card-foreground: 15 23 42; /* #0f172a - Very dark slate */
   --popover: 255 255 255;
@@ -38,8 +38,8 @@
 
 /* Dark mode variables */
 .dark {
-  --background: 2 6 23; /* #020617 - Very dark blue */
-  --foreground: 248 250 252; /* #f8fafc */
+  --background: 15 23 42; /* #0f172a - Dark slate */
+  --foreground: 248 250 252; /* #f8fafc - Light text */
   --card: 15 23 42; /* #0f172a - Dark slate */
   --card-foreground: 226 232 240; /* #e2e8f0 */
   --popover: 15 23 42;
@@ -59,45 +59,52 @@
   --ring: 99 102 241;
 }
 
+/* Ensure body uses theme colors */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
 /* Professional glassmorphism utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.90);
+  background: hsl(var(--background) / 0.90);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 8px 32px hsl(var(--foreground) / 0.08);
 }
 
 .glass-dark {
-  background: rgba(15, 23, 42, 0.90);
+  background: hsl(var(--background) / 0.90);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 8px 32px hsl(var(--foreground) / 0.1);
 }
 
 /* Theme-aware header styles */
 .header-light {
-  background: rgba(249, 249, 249, 0.95);
+  background: hsl(var(--background) / 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid hsl(var(--border));
+  box-shadow: 0 2px 8px hsl(var(--foreground) / 0.04);
 }
 
 .header-dark {
-  background: rgba(15, 15, 15, 0.95);
+  background: hsl(var(--background) / 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid hsl(var(--border));
+  box-shadow: 0 2px 8px hsl(var(--foreground) / 0.1);
 }
 
 /* Nav link glow effects for dark mode */
 .nav-link-dark {
   position: relative;
   transition: all 0.3s ease;
+  color: hsl(var(--foreground));
 }
 
 .nav-link-dark:hover {
-  color: #a855f7;
-  text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+  color: hsl(var(--primary));
+  text-shadow: 0 0 8px hsl(var(--primary) / 0.4);
 }
 
 .nav-link-dark::after {
@@ -107,7 +114,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #a855f7, #ec4899);
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
   transition: width 0.3s ease;
 }
 
@@ -119,11 +126,11 @@
 .nav-link-light {
   position: relative;
   transition: all 0.3s ease;
-  color: #374151;
+  color: hsl(var(--foreground));
 }
 
 .nav-link-light:hover {
-  color: #7c3aed;
+  color: hsl(var(--primary));
 }
 
 .nav-link-light::after {
@@ -133,7 +140,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
   transition: width 0.3s ease;
 }
 
@@ -182,11 +189,11 @@
 
 /* Professional gradient backgrounds */
 .gradient-bg-light {
-  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
 }
 
 .gradient-bg-dark {
-  background: linear-gradient(to bottom, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background: linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--card)) 50%, hsl(var(--muted)) 100%);
 }
 
 /* Enhanced button styles */

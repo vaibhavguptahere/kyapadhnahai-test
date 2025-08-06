@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
         >
           <LenisProvider>
             <ScrollProgressBar />
-            <div className="min-h-screen relative overflow-hidden gradient-bg-light dark:gradient-bg-dark">
+            <div className="min-h-screen relative overflow-hidden bg-background text-foreground">
               {/* Floating gradient blobs */}
-              <div className="floating-blob top-20 left-20 w-96 h-96 bg-gradient-to-r from-indigo-200/30 to-purple-200/30 dark:from-indigo-500/20 dark:to-purple-500/20" />
-              <div className="floating-blob top-40 right-20 w-80 h-80 bg-gradient-to-r from-purple-200/30 to-pink-200/30 dark:from-purple-500/20 dark:to-pink-500/20" />
-              <div className="floating-blob bottom-20 left-1/3 w-72 h-72 bg-gradient-to-r from-blue-200/30 to-indigo-200/30 dark:from-blue-500/20 dark:to-indigo-500/20" />
+              <div className="floating-blob top-20 left-20 w-96 h-96 bg-gradient-to-r from-primary/10 to-secondary/10" />
+              <div className="floating-blob top-40 right-20 w-80 h-80 bg-gradient-to-r from-secondary/10 to-accent/10" />
+              <div className="floating-blob bottom-20 left-1/3 w-72 h-72 bg-gradient-to-r from-accent/10 to-primary/10" />
               
               <Header />
               <main className="container mx-auto px-4 py-8 relative z-10">
